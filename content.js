@@ -7,4 +7,4 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 	}
 });
 
-document.body.style.backgroundColor = 'white';
+// document.body.style.backgroundColor = 'white';
