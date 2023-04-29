@@ -30,9 +30,6 @@ chrome.storage.local.get('font', function (data) {
 
 function sendMessage(message) {
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-		chrome.tabs.sendMessage(tabs[0].id, message, function (response) {
-			console.log('Message sent: ', message);
-			console.log('Response received: ', response);
-		});
+		chrome.runtime.sendMessage({ action: 'change-font', font: font });
 	});
 }
